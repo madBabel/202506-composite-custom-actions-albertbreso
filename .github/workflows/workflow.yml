@@ -12,6 +12,8 @@ jobs:
       run:
         working-directory: ${{env.WORK_DIR}}
     steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
       - name: composite-actions
         uses: ./.github/actions/composite-deps@v1 
         with:
