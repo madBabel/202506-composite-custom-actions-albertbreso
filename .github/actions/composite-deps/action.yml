@@ -15,20 +15,18 @@ runs:
   steps:
     - name: Checkout Code
       uses: actions/checkout@v4
-      Working-directory: ${{ inputs.work-dir }}
 
     - name: Setup Node
       uses: actions/setup-node@v4
       with:
         node-version: ${{ inputs.node-version }}
-      Working-directory: ${{ inputs.work-dir }}
 
     - name: Install Dependencies
       run: npm ci
       shell: bash
-      Working-directory: ${{ inputs.work-dir }}
+      working-directory: ${{ inputs.work-dir }}
 
     - name: Run Unit Tests
       run: npm run test
       shell: bash
-      Working-directory: ${{ inputs.work-dir }}
+      working-directory: ${{ inputs.work-dir }}
