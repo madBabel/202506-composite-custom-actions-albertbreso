@@ -1,4 +1,5 @@
 name: 'Composite action'
+description: 'A composite action to set up Node.js, install dependencies, and run unit tests'
 inputs:
   node-version:
     description: 'Node.js version to use'
